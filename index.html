@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EOS Clipper - eosbutton claim</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Insert this line above script imports  -->
+	<script>
+		if (typeof module === 'object') {
+			window.module = module;
+			module = undefined;
+		}
+	</script>
+
+	<!-- normal script imports etc  -->
+	<script src="scripts/jquery-3.3.1.js"></script>
+	<script src="scripts/moment.min.js"></script>
+	<script src="scripts/eos.js"></script>
+	<script src="scripts/app.js"></script>
+
+	<!-- Insert this line after script imports -->
+	<script>
+		if (window.module) module = window.module;
+	</script>
+
+</head>
+
+<body>
+	<div>
+		<p>最后领取：
+			<span id='last_claim_time'></span>
+		</p>
+		<p>下次领取：
+			<span id='next_claim_time'></span>
+		</p>
+		<p>EOSIO时间：
+			<span id='bptime'></span>
+		</p>
+		<hr>
+		<p>剩余时间：
+			<span id='remain_time'></span>
+		</p>
+	</div>
+	<div>
+		<br>
+		<div style="display: flex; padding-top: 6px;align-content: flex-start; flex-direction: column;">
+			<span style="width: 20%;margin-bottom: 6px;">账户名：</span>
+			<input style="width: 180px;font-size: 1.0em;" type="text" id='account_name' value="eosdashuo123" />
+		</div>
+		<div style="display: flex; padding-top: 6px;align-content: flex-start; flex-direction: column;">
+			<span style="width: 20%;margin-bottom: 6px;">公钥：</span>
+			<input style="width: 550px;font-size: 1.0em;" type="text" id='public_key' disabled value=""
+			/>
+		</div>
+		<div style="display: flex; padding-top: 6px;align-content: flex-start; flex-direction: column;">
+			<span style="width: 20%;margin-bottom: 6px;">私钥：</span>
+			<input style="width: 550px;font-size: 1.0em;" type="password" id='private_key' value="YOUR_PRIVATE_KEY"
+			/>
+		</div>
+
+	</div>
+	<div>
+		<p style="text-align: left;">
+			<input id='startup-btn' type="button" style="font-size: 1.2em;" value="设置">
+		</p>
+	</div>
+	<div id='debugOutput'></div>
+
+	<script type="text/javascript">
+	</script>
+</body>
+
+</html>
